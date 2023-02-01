@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- base is how html content will look on each webpage except main content on page -->
+<html>
+  <head>
+    <!-- character -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- bootstrap link to content delivery netrowk and will allow you to load css classes and stylesheets-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- python statement, block title and endblock in curly braces defien block in base template inhertied by children which can be changes and everityhign in between block is overiden -->
+    <title>{% block title %}Profile{% endblock %}</title>
+  </head>
+  <body>
+    <!-- define nav bar and javascrpt is loaded in script tags -->
+    <!-- lg nav  bar class from boot strap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+      <!-- navbar toggler can expand or collapse button  -->
+        <span class="navbar-toggler-icon"></span>
+        <!-- load icon -->
+      </button>
+      <!-- define navigation items in nav bar using div tag -->
+      <div class="collapse navbar-collapse" id="navbar">
+        <!-- collapsuble nav bar -->
+        <div class="navbar-nav">
+          <!-- define items in nav bar in dv tag -->
+          <a class="nav-item nav-link" id="profile" href="/">Profile</a>
+          <a class="nav-item nav-link" id="experience" href="/experience">Experience</a>
+          <a class="nav-item nav-link" id="projets" href="/projects">Projects</a>
+          <a class="nav-item nav-link" id="contact" href="/contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <!-- define container class and block content which can make anything in between block can be overwritted -->
+    <!-- container ensures some padding between the nav bar and edge of screen  -->
+    <div class="container">
+      {%block content%} 
+      {%end block%}
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  
+  </body>
+</html>
+
+
+<!-- base is how html content will look on each webpage except main content on page -->
+
+
+
