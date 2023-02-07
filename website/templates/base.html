@@ -19,6 +19,7 @@
     />
     <!-- python statement, block title and endblock in curly braces defien block in base template inhertied by children which can be changes and everityhign in between block is overiden -->
     <title>{% block title %}Profile{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
   </head>
   <body>
     <!-- define nav bar and javascrpt is loaded in script tags -->
@@ -46,11 +47,15 @@
         </div>
       </div>
     </nav>
-    <!-- define container class and block content which can make anything in between block can be overwritted -->
+     <!-- define container class and block content which can make anything in between block can be overwritted -->
     <!-- container ensures some padding between the nav bar and edge of screen  -->
-    <div class="container">
+    <div>
       {%block content%} 
       {%endblock%}
+    </div>
+    <div>
+      {% block extra_css %}
+      {% endblock %}
     </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -67,12 +72,11 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-  
   </body>
+  
+  
+  
 </html>
 
 
 <!-- base is how html content will look on each webpage except main content on page -->
-
-
-
