@@ -10,7 +10,7 @@ views = Blueprint("views", __name__)
 #decoratotr
 @views.route("/")
 def profile():
-    return render_template("profile.html")
+    return render_template("index.html")
 # runs everything inside home
 
 # define route/blueprint for home page to be registered in init py file 
