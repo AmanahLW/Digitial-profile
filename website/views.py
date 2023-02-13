@@ -24,7 +24,7 @@ def experience():
 #decoratotr
 @views.route("/projects")
 def projects():
-    return render_template("projects.html")
+    return render_template("portfolio.html")
 # runs everything inside home
 
 # define route/blueprint for home page to be registered in init py file 
